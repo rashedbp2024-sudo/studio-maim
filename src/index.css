@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* Desktop typography & smooth rendering */
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbars for desktop panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #18181b;
+}
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
+
+/* Print handling */
+.dpls-print-only {
+  display: none !important;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .dpls-print-only,
+  .dpls-print-only * {
+    visibility: visible;
+  }
+  .dpls-print-only {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+  }
+  .dpls-print-page {
+    margin: 0;
+    padding: 0;
+    box-shadow: none !important;
+    page-break-after: always;
+  }
+  @page {
+    margin: 0;
+  }
+}

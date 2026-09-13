@@ -1,0 +1,6 @@
+{
+  "name": "RBP COMPUTER",
+  "description": "Professional desktop print layout preparation studio for RBP COMPUTER print shop to crop, straighten, align, size, and print customer document photos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
